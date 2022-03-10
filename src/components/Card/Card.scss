@@ -1,0 +1,168 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    cursor: url('../assets/pointer.svg'), auto;
+    &-top {
+        border: 1px solid #eeeeee;
+        box-sizing: border-box;
+        border-radius: 9px;
+        padding-inline: 15px;
+        padding-block: 4px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 13px;
+        font-size: 12px;
+        font-weight: normal;
+        padding-inline: 15px;
+        padding-block: 4px;
+        &_top {
+            display: flex;
+            height: 30px;
+            div {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                margin-block: 0;
+                text-align: -webkit-left;
+                color: #484848;
+            }
+        }
+        &_bottom {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 10px;
+            padding-inline-start: 0;
+            >li.brand,
+            li.color {
+                font-weight: bold;
+                color: #484848;
+                >span {
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+    &-bottom {
+        padding-top: 13px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 18px;
+        padding-inline: 15px;
+        padding-block: 4px;
+        &_prices {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            &-discountedprice {
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 18px;
+                >.prevprice {
+                    text-decoration-line: line-through;
+                    color: #9B9B9B;
+                }
+                >.discountrate {
+                    color: red;
+                    font-weight: 700;
+                }
+            }
+        }
+        ul.card-bottom_prices {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-inline-start: 0;
+        }
+        button {
+            align-items: center;
+        }
+    }
+    &_basket-button {
+        width: 100%;
+        display: none;
+        padding-block: 20px;
+        cursor: inherit;
+        >button {
+            border-radius: 8px;
+            padding-inline: 10px;
+            background-color: #FF60001C;
+            height: 32px;
+            width: 100%;
+            border-style: hidden;
+            cursor: url('./../assets/pointer.svg'), auto;
+            >span {
+                font-weight: 500;
+                font-size: 14px;
+                color: #FF6000;
+            }
+        }
+        >button:hover {
+            background-color: #ff6200c9;
+            >span {
+                color: #ffffff;
+            }
+        }
+    }
+    &:hover {
+        border: 1px solid #eeeeee;
+        box-sizing: border-box;
+        border-radius: 9px;
+        >.card-bottom {
+            align-items: center;
+        }
+        >ul,
+        .card-body_bottom,
+        .card-bottom_prices {
+            display: none;
+        }
+        >.card-top {
+            border: none;
+        }
+        >.card-bottom>.card_basket-button {
+            display: block;
+        }
+    }
+     :disabled {
+        background: rgba(126, 126, 126, 0.11);
+        height: 30px;
+        align-items: center;
+        text-align: center;
+        transition: all 0.5s;
+        border: 0px solid white;
+        border-radius: 8px;
+        padding-inline: 0;
+        padding-inline-start: 9px;
+        /* or 129% */
+        display: flex;
+        align-items: center;
+        text-align: center;
+        >span {
+            font-weight: 500;
+            font-size: 14px;
+            color: #B0B0B0;
+            ;
+        }
+        &:hover {
+            background-color: rgba(126, 126, 126, 0.11);
+            >span {
+                color: #B0B0B0;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

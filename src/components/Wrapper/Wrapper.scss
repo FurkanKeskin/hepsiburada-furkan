@@ -1,0 +1,53 @@
+    @import '../../constants/constants.scss';
+    .wrapper {
+        max-width: 1440px;
+        margin: auto;
+        .splitPane {
+            width: 100%;
+            height: 100%;
+            &-left {
+                float: left;
+                width: 25%;
+                height: 100%;
+                .filter-wrapper {
+                    ul {
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding-left: 20px;
+                        font-size: 14px;
+                    }
+                    @include respond-to("medium") {
+                        &>ul {
+                            margin-inline-start: 60px;
+                        }
+                    }
+                }
+            }
+            &-right {
+                float: left;
+                width: 60%;
+                height: 100%;
+            }
+            @include respond-to("small") {
+                &-left {
+                    width: 35%;
+                }
+                &-right {
+                    width: 65%;
+                }
+            }
+            @include respond-to("small") {
+                &-left {
+                    width: 20%;
+                    >ul {
+                        padding-inline-start: 80px;
+                    }
+                }
+                &-right {
+                    width: 80%;
+                }
+            }
+        }
+    }

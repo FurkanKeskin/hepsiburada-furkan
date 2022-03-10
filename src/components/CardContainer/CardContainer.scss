@@ -1,0 +1,31 @@
+@import '../../constants/constants.scss';
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 140px);
+    gap: 10px;
+    margin-inline-end: 80px;
+    list-style: none;
+    padding-inline-start: 20px;
+    // @include respond-to("x-small") {
+    //     & {
+    //         grid-template-columns: repeat(2, 250px);
+    //     }
+    // }
+    @include respond-to("small") {
+        & {
+            grid-template-columns: repeat(3, 158px);
+            padding-inline-start: 0px;
+        }
+    }
+    @include respond-to("medium") {
+        & {
+            grid-template-columns: repeat(3, 218px);
+        }
+    }
+    @include respond-to("large") {
+        & {
+            grid-template-columns: repeat(4, 257px);
+            gap: 15px;
+        }
+    }
+}

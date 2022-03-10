@@ -1,0 +1,36 @@
+@import '../../../constants/constants.scss';
+.subheader {
+    height: 54px;
+    margin-block: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include respond-to("small") {
+        & {
+            margin-inline: 80px;
+        }
+    }
+    &-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &-title {
+        font-weight: bold;
+        font-size: 28px;
+    }
+    &-results {
+        text-align: left;
+    }
+    &-searchresults {
+        font-size: 15px;
+        >h4 {
+            color: #B0B0B0;
+            margin: 0;
+            font-weight: 400;
+            >span {
+                color: #484848
+            }
+        }
+    }
+}

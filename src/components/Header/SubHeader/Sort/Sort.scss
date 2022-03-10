@@ -1,0 +1,65 @@
+.dropDown {
+    display: flex;
+    justify-content: center;
+    width: 118px;
+    height: 48px;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    /* or 24px */
+    border: 1px solid #b0b0b0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: #ffffff;
+    // &:hover {
+    //     background-color: #ff6100;
+    //     color: #ffffff;
+    // }
+    &:after {
+        content: "";
+        margin: 0 0 0 0.5em;
+        border: 5px solid transparent;
+        border-top: 5px solid #BDBDBD;
+        border-bottom: 0 none;
+    }
+}
+
+.options-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    visibility: visible;
+    z-index: 5;
+    position: absolute;
+    box-sizing: border-box;
+    cursor: default;
+    background-position: 100% 0, 100% 0, 0 100%, 0 100%;
+    background-repeat: no-repeat;
+    width: 160px;
+    text-align: left;
+    span:hover {
+        background: blue;
+        color: white;
+    }
+}
+
+.options-wrap span.active {
+    background-image: url("../../../assets/check.png");
+    background-size: 21px 21px;
+    background-repeat: no-repeat;
+    background-position: left;
+    text-align: left;
+}
+
+.options-wrap span {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding-left: 22px;
+    &:first-child {
+        padding-top: 5px;
+    }
+    &:last-child {
+        padding-bottom: 5px;
+    }
+}

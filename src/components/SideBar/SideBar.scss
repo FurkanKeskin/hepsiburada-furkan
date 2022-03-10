@@ -1,0 +1,17 @@
+.filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    >ul {
+        list-style: none;
+        padding-inline-start: 0;
+        >li.filter-item {
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 24px;
+            &:hover {
+                color: #FF6000;
+            }
+        }
+    }
+}
