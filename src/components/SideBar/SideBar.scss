@@ -1,3 +1,4 @@
+@import '../../constants/constants.scss';
 .filter-wrapper {
     display: flex;
     flex-direction: column;
@@ -7,8 +8,14 @@
         padding-inline-start: 0;
         >li.filter-item {
             cursor: pointer;
-            font-size: 14px;
-            line-height: 24px;
+            font-size: 9px;
+            line-height: 20px;
+            @include respond-to("small") {
+                & {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
             &:hover {
                 color: #FF6000;
             }

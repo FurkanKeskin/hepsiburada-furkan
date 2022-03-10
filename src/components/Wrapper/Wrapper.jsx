@@ -7,11 +7,11 @@ import './Wrapper.scss';
 
 function SplitPane(props) {
   return (
-    <div className="splitPane">
-      <div className="splitPane-left">
+    <div className="split-pane">
+      <div className="split-pane-left">
         {props.left}
       </div>
-      <div className="splitPane-right">
+      <div className="split-pane-right">
         {props.right}
       </div>
     </div>

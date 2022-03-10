@@ -1,4 +1,17 @@
+@import '../../../constants/constants.scss';
 .logo {
     display: flex;
-    margin-inline-start: 80px;
+    >a>img {
+        width: 75%;
+        float: left;
+    }
+    @include respond-to("small") {
+        &>a>img {
+            width: 100%;
+            float: none;
+        }
+    }
+    @include respond-to("medium") {
+        margin-inline-start: 60px;
+    }
 }

@@ -1,4 +1,6 @@
+@import '../../../constants/constants.scss';
 .searchBox {
+    display: none;
     outline: none;
     height: 38px;
     background: #eeeeee;
@@ -7,6 +9,11 @@
     background-image: url("../../assets/search.png");
     background-repeat: no-repeat;
     background-position: 20px 11px;
+    @include respond-to("medium") {
+        & {
+            display: block;
+        }
+    }
 }
 
 .search-icon {
@@ -19,7 +26,6 @@
 }
 
 input[class="searchBox"] {
-    text-align: left;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;

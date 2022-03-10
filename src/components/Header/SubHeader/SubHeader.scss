@@ -5,11 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include respond-to("small") {
-        & {
-            margin-inline: 80px;
-        }
-    }
+    margin-inline: 20px;
     &-left {
         display: flex;
         flex-direction: column;
@@ -17,7 +13,12 @@
     }
     &-title {
         font-weight: bold;
-        font-size: 28px;
+        font-size: 18px;
+        @include respond-to("medium") {
+            & {
+                font-size: 28px;
+            }
+        }
     }
     &-results {
         text-align: left;
@@ -31,6 +32,16 @@
             >span {
                 color: #484848
             }
+        }
+    }
+    @include respond-to("small") {
+        & {
+            margin-inline: 60px;
+        }
+    }
+    @include respond-to("medium") {
+        & {
+            margin-inline: 80px;
         }
     }
 }
