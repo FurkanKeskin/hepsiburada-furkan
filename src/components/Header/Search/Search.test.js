@@ -11,7 +11,7 @@ describe('function called on click', () => {
 			setSearch: jest.fn(),
 			search: jest.fn()
 		};
-
+		// eslint-disable-next-line testing-library/no-render-in-setup
 		render(
 			<ProductListContext.Provider value={mockValue}>
 				<Search />

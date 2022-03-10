@@ -6,11 +6,6 @@
     margin-inline-end: 80px;
     list-style: none;
     padding-inline-start: 20px;
-    // @include respond-to("x-small") {
-    //     & {
-    //         grid-template-columns: repeat(2, 250px);
-    //     }
-    // }
     @include respond-to("small") {
         & {
             grid-template-columns: repeat(3, 158px);

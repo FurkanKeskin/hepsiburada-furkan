@@ -11,6 +11,7 @@ describe("function called on click", () => {
   };
 
   beforeEach(() => {
+    // eslint-disable-next-line testing-library/no-render-in-setup
     render(
       <ProductListContext.Provider value={mockValue}>
         <Header />
